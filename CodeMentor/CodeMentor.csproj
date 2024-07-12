@@ -1,0 +1,492 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{233A311F-B547-4537-B39F-0565DFB5A102}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeMentor</RootNamespace>
+    <AssemblyName>CodeMentor</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44377</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.11.9.2\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AspxAdmin\AdminCategoria.aspx" />
+    <Content Include="AspxAdmin\AdminCertificados.aspx" />
+    <Content Include="AspxAdmin\AdminCursoRev.aspx" />
+    <Content Include="AspxAdmin\AdminCursos.aspx" />
+    <Content Include="AspxAdmin\AdminInscripciones.aspx" />
+    <Content Include="AspxAdmin\AdminLenguajes.aspx" />
+    <Content Include="AspxAdmin\AdminPreguntas.aspx" />
+    <Content Include="AspxAdmin\AdminReseñas.aspx" />
+    <Content Include="AspxAdmin\AdminRespuesta.aspx" />
+    <Content Include="AspxAdmin\AdminUsuarios.aspx" />
+    <Content Include="AspxAdmin\BackOffice.aspx" />
+    <Content Include="AspxAdmin\DiseñarCurso.aspx" />
+    <Content Include="AspxAdmin\EdicionCurso.aspx" />
+    <Content Include="AspxUsuario\Contacto.aspx" />
+    <Content Include="AspxUsuario\EdicionPerfil.aspx" />
+    <Content Include="AspxUsuario\Emitir.aspx" />
+    <Content Include="AspxUsuario\ErrorUsuarioDeBaja.aspx" />
+    <Content Include="AspxUsuario\Guia.aspx" />
+    <Content Include="AspxUsuario\DetalleCurso.aspx" />
+    <Content Include="AspxUsuario\Imagenes\Iconos\CandadoCerrado.png" />
+    <Content Include="AspxUsuario\Imagenes\Iconos\Certificado.png" />
+    <Content Include="AspxUsuario\Imagenes\Iconos\CandadoAbiertoLlave.png" />
+    <Content Include="AspxUsuario\Imagenes\Iconos\codementor-fondonegro.png" />
+    <Content Include="AspxUsuario\Imagenes\Iconos\llaveBorde.png" />
+    <Content Include="AspxUsuario\Imagenes\Iconos\llaveDorada.png" />
+    <Content Include="AspxUsuario\Imagenes\Iconos\youtube.png" />
+    <Content Include="AspxUsuario\Inicio.aspx" />
+    <Content Include="AspxUsuario\InicioRegistrado.aspx" />
+    <Content Include="AspxUsuario\MisCursos.aspx" />
+    <Content Include="AspxUsuario\PreguntaDetalle.aspx" />
+    <Content Include="AspxUsuario\Reseña.aspx" />
+    <Content Include="AspxUsuario\RecuperarContraseña.aspx" />
+    <Content Include="ContentBs\bootstrap-grid.css" />
+    <Content Include="ContentBs\bootstrap-grid.min.css" />
+    <Content Include="ContentBs\bootstrap-grid.rtl.css" />
+    <Content Include="ContentBs\bootstrap-grid.rtl.min.css" />
+    <Content Include="ContentBs\bootstrap-reboot.css" />
+    <Content Include="ContentBs\bootstrap-reboot.min.css" />
+    <Content Include="ContentBs\bootstrap-reboot.rtl.css" />
+    <Content Include="ContentBs\bootstrap-reboot.rtl.min.css" />
+    <Content Include="ContentBs\bootstrap-utilities.css" />
+    <Content Include="ContentBs\bootstrap-utilities.min.css" />
+    <Content Include="ContentBs\bootstrap-utilities.rtl.css" />
+    <Content Include="ContentBs\bootstrap-utilities.rtl.min.css" />
+    <Content Include="ContentBs\bootstrap.css" />
+    <Content Include="ContentBs\bootstrap.min.css" />
+    <Content Include="ContentBs\bootstrap.rtl.css" />
+    <Content Include="ContentBs\bootstrap.rtl.min.css" />
+    <Content Include="ContentBs\Site.css" />
+    <Content Include="ContentBs\StyleSheetGlobal.css" />
+    <Content Include="Content\AdminCursoRev.css" />
+    <Content Include="Content\AdminCursos.css" />
+    <Content Include="Content\AdminEdicionCurso.css" />
+    <Content Include="Content\AdminInscripciones.css" />
+    <Content Include="Content\AdminPreguntas.css" />
+    <Content Include="Content\AdminRespuesta.css" />
+    <Content Include="Content\AdminUsuarios.css" />
+    <Content Include="Content\CodeMentorStyle.css" />
+    <Content Include="Content\Contacto.css" />
+    <Content Include="Content\DetalleCurso.css" />
+    <Content Include="Content\EdicionPerfil.css" />
+    <Content Include="Content\EmitirCertificado.css" />
+    <Content Include="Content\ErrorUsuarioDeBaja.css" />
+    <Content Include="Content\Guia.css" />
+    <Content Include="Content\Ingresar.css" />
+    <Content Include="Content\InicioNoRegis.css" />
+    <Content Include="Content\InicioRegis.css" />
+    <Content Include="Content\MasterAdmin.css" />
+    <Content Include="Content\MisCursos.css" />
+    <Content Include="Content\PerfilUsuario.css" />
+    <Content Include="Content\PreguntasRespuestas.css" />
+    <Content Include="Content\RecuperarContraseña.css" />
+    <Content Include="Content\Registrar.css" />
+    <Content Include="Content\Reproduccion.css" />
+    <Content Include="Content\Reseña.css" />
+    <Content Include="Content\ReseñasStyle.css" />
+    <Content Include="Global.asax" />
+    <Content Include="AspxUsuario\Ingresar.aspx" />
+    <Content Include="AspxUsuario\ModificacionUsuario.aspx" />
+    <Content Include="AspxUsuario\PerfilUsuario.aspx" />
+    <Content Include="AspxUsuario\Registrar.aspx" />
+    <Content Include="AspxUsuario\Reproduccion.aspx" />
+    <Content Include="AspxUsuario\PreguntasRespuestas.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspxAdmin\AdminCategoria.aspx.cs">
+      <DependentUpon>AdminCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminCategoria.aspx.designer.cs">
+      <DependentUpon>AdminCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminCertificados.aspx.cs">
+      <DependentUpon>AdminCertificados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminCertificados.aspx.designer.cs">
+      <DependentUpon>AdminCertificados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminCursoRev.aspx.cs">
+      <DependentUpon>AdminCursoRev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminCursoRev.aspx.designer.cs">
+      <DependentUpon>AdminCursoRev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminCursos.aspx.cs">
+      <DependentUpon>AdminCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminCursos.aspx.designer.cs">
+      <DependentUpon>AdminCursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminInscripciones.aspx.cs">
+      <DependentUpon>AdminInscripciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminInscripciones.aspx.designer.cs">
+      <DependentUpon>AdminInscripciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminLenguajes.aspx.cs">
+      <DependentUpon>AdminLenguajes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminLenguajes.aspx.designer.cs">
+      <DependentUpon>AdminLenguajes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminPreguntas.aspx.cs">
+      <DependentUpon>AdminPreguntas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminPreguntas.aspx.designer.cs">
+      <DependentUpon>AdminPreguntas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminReseñas.aspx.cs">
+      <DependentUpon>AdminReseñas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminReseñas.aspx.designer.cs">
+      <DependentUpon>AdminReseñas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminRespuesta.aspx.cs">
+      <DependentUpon>AdminRespuesta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminRespuesta.aspx.designer.cs">
+      <DependentUpon>AdminRespuesta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminUsuarios.aspx.cs">
+      <DependentUpon>AdminUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\AdminUsuarios.aspx.designer.cs">
+      <DependentUpon>AdminUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\BackOffice.aspx.cs">
+      <DependentUpon>BackOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\BackOffice.aspx.designer.cs">
+      <DependentUpon>BackOffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\DiseñarCurso.aspx.cs">
+      <DependentUpon>DiseñarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\DiseñarCurso.aspx.designer.cs">
+      <DependentUpon>DiseñarCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxAdmin\EdicionCurso.aspx.cs">
+      <DependentUpon>EdicionCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxAdmin\EdicionCurso.aspx.designer.cs">
+      <DependentUpon>EdicionCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\Contacto.aspx.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\Contacto.aspx.designer.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\EdicionPerfil.aspx.cs">
+      <DependentUpon>EdicionPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\EdicionPerfil.aspx.designer.cs">
+      <DependentUpon>EdicionPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\Emitir.aspx.cs">
+      <DependentUpon>Emitir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\Emitir.aspx.designer.cs">
+      <DependentUpon>Emitir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\ErrorUsuarioDeBaja.aspx.cs">
+      <DependentUpon>ErrorUsuarioDeBaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\ErrorUsuarioDeBaja.aspx.designer.cs">
+      <DependentUpon>ErrorUsuarioDeBaja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\Guia.aspx.cs">
+      <DependentUpon>Guia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\Guia.aspx.designer.cs">
+      <DependentUpon>Guia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\DetalleCurso.aspx.cs">
+      <DependentUpon>DetalleCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\DetalleCurso.aspx.designer.cs">
+      <DependentUpon>DetalleCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\InicioRegistrado.aspx.cs">
+      <DependentUpon>InicioRegistrado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\InicioRegistrado.aspx.designer.cs">
+      <DependentUpon>InicioRegistrado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\MisCursos.aspx.cs">
+      <DependentUpon>MisCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\MisCursos.aspx.designer.cs">
+      <DependentUpon>MisCursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\PreguntaDetalle.aspx.cs">
+      <DependentUpon>PreguntaDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\PreguntaDetalle.aspx.designer.cs">
+      <DependentUpon>PreguntaDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\Reseña.aspx.cs">
+      <DependentUpon>Reseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\Reseña.aspx.designer.cs">
+      <DependentUpon>Reseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\RecuperarContraseña.aspx.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\RecuperarContraseña.aspx.designer.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\Ingresar.aspx.cs">
+      <DependentUpon>Ingresar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\Ingresar.aspx.designer.cs">
+      <DependentUpon>Ingresar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MasterAdmin.Master.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\MasterAdmin.Master.designer.cs">
+      <DependentUpon>MasterAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\MasterUsuario.Master.cs">
+      <DependentUpon>MasterUsuario.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\MasterUsuario.Master.designer.cs">
+      <DependentUpon>MasterUsuario.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\ModificacionUsuario.aspx.cs">
+      <DependentUpon>ModificacionUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\ModificacionUsuario.aspx.designer.cs">
+      <DependentUpon>ModificacionUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\PerfilUsuario.aspx.cs">
+      <DependentUpon>PerfilUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\PerfilUsuario.aspx.designer.cs">
+      <DependentUpon>PerfilUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\PreguntasRespuestas.aspx.cs">
+      <DependentUpon>PreguntasRespuestas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\PreguntasRespuestas.aspx.designer.cs">
+      <DependentUpon>PreguntasRespuestas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AspxUsuario\Registrar.aspx.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\Registrar.aspx.designer.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AspxUsuario\Reproduccion.aspx.cs">
+      <DependentUpon>Reproduccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AspxUsuario\Reproduccion.aspx.designer.cs">
+      <DependentUpon>Reproduccion.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Masters\MasterUsuario.Master" />
+    <Content Include="ContentBs\bootstrap-grid.css.map" />
+    <Content Include="ContentBs\bootstrap-grid.min.css.map" />
+    <Content Include="ContentBs\bootstrap-grid.rtl.css.map" />
+    <Content Include="ContentBs\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="ContentBs\bootstrap-reboot.css.map" />
+    <Content Include="ContentBs\bootstrap-reboot.min.css.map" />
+    <Content Include="ContentBs\bootstrap-reboot.rtl.css.map" />
+    <Content Include="ContentBs\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="ContentBs\bootstrap-utilities.css.map" />
+    <Content Include="ContentBs\bootstrap-utilities.min.css.map" />
+    <Content Include="ContentBs\bootstrap-utilities.rtl.css.map" />
+    <Content Include="ContentBs\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="ContentBs\bootstrap.css.map" />
+    <Content Include="ContentBs\bootstrap.min.css.map" />
+    <Content Include="ContentBs\bootstrap.rtl.css.map" />
+    <Content Include="ContentBs\bootstrap.rtl.min.css.map" />
+    <Content Include="Masters\MasterAdmin.Master" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="AspxAdmin\Imagenes\Cursos\" />
+    <Folder Include="AspxUsuario\Imagenes\Perfil\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio\Dominio.csproj">
+      <Project>{95237174-a198-4298-b5ef-f87fe82cd5e2}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{16395293-5a40-425f-8e07-fad35f86b3f5}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Validaciones\Validaciones.csproj">
+      <Project>{b10b2e28-20c5-4214-9171-f7b519415615}</Project>
+      <Name>Validaciones</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50235</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44377/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

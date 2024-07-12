@@ -1,0 +1,50 @@
+﻿.containerEmitir {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 36px;
+}
+
+pGracias {
+    font-size: 18px;
+    color: #333333;
+}
+
+.btnEmitir {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+    .btnEmitir:hover {
+        background-color: #45a049;
+    }
+
+.thank-you {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #666666;
+}
+
+.invitation {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333333;
+}

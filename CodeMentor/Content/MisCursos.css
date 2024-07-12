@@ -1,0 +1,151 @@
+﻿
+.bienvenida-row {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bienvenida-titulo {
+    font-size: 2.5rem;
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+.curso-titulo-container {
+    text-align: center;
+    padding: 2px;
+    margin-top: 5px;
+}
+
+.curso-titulo {
+    font-size: 1.25rem;
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.btn-certificado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #66b3ff;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .btn-certificado:hover {
+        background-color: #e6f2ff;
+        color: black;
+        border: 0.5px solid #66b3ff;
+    }
+
+.certificado-icon {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.bienvenida {
+    padding: 1rem 0;
+}
+
+.bienvenida-row {
+    margin-bottom: 1rem;
+}
+
+.bienvenida-titulo {
+    font-size: 2.5rem;
+    
+}
+
+.cursando {
+    margin-bottom: 2rem;
+}
+
+.titulo-cursos {
+    padding: 1rem 0;
+}
+
+.cursando-h3 {
+    font-size: 2rem;
+    color: #343a40;
+}
+
+.card {
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+    width: 17rem;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+.card-img-top-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.img-cuadrada {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+    .img-cuadrada:hover {
+        transform: scale(1.1);
+    }
+
+.body-card {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #343a40;
+}
+
+.btn-Card {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    .btn-Card:hover {
+        background-color: #3399ff;
+        transform: translateY(-3px);
+    }
+
+.progress-section {
+    margin-top: 0.3rem;
+}
+
+.progress {
+    height: 1rem;
+    border: 0.5px solid grey;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.progress-bar {
+    background-color: #66b3ff;
+}
+

@@ -1,0 +1,131 @@
+﻿:root {
+    --aquamarine: #00e4b5ff;
+    --electric-indigo: #7200faff;
+    --raisin-black: #1c1b1eff;
+    --white: #ffffffff;
+    --platinum: #e2e3e4ff;
+}
+
+body {
+    background: var(--white);
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    background: var(--raisin-black);
+    height: auto;
+}
+
+/*BOTONES*/
+
+#btnIngresar2 {
+    background: var(--aquamarine);
+    color: var(--raisin-black);
+    border-color: transparent;
+}
+
+#btnIngresar {
+    background: var(--aquamarine);
+    color: var(--raisin-black);
+    border-color: transparent;
+}
+
+#btnBuscar {
+    border: none;
+    outline: none;
+}
+
+    #btnBuscar:hover {
+        border: none;
+        outline: none;
+    }
+
+/*FOOTER*/
+
+.footer {
+    background-color: var(--raisin-black);
+    color: var(--white);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-column {
+    flex: 1;
+   margin:10px;
+}
+
+    .footer-column h4 {
+        color: var(--aquamarine);
+    }
+
+    .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .footer-column ul li {
+        }
+
+            .footer-column ul li a {
+                color: var(--white);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .footer-column ul li a:hover {
+                    color: var(--aquamarine);
+                }
+
+    .footer-column .social-links {
+        display: flex;
+        gap: 10px;
+    }
+
+        .footer-column .social-links a {
+            color: var(--white);
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+            .footer-column .social-links a:hover {
+                color: var(--aquamarine);
+            }
+
+
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+    .footer-bottom p {
+        margin: 0;
+    }
+
+/*CARDS*/
+
+.card { /* AFECTA A TODAS. MEJOR POR ID O NOMBRE CLASE*/
+    margin-bottom: 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btnBonito {
+    align-self: flex-end;
+    background-color: var(--electric-indigo);
+    color: var(--white);
+    border: none;
+}
+
+    .btnBonito:hover {
+        background-color: #5a00cc; /*--electric-indigo mas oscuro*/
+        color: var(--white);
+    }

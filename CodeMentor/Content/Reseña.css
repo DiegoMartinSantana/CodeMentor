@@ -1,0 +1,23 @@
+﻿.container {
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+
+.estrellita {
+    color: gold;
+    font-size: 1.5em;
+}
+
+    .estrellita option {
+        color: gold;
+        font-size: 1.5rem;
+    }

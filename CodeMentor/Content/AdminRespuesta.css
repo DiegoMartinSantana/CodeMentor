@@ -1,0 +1,62 @@
+﻿body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.list-group-item {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+    .list-group-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+.card {
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+.card-body {
+    padding: 20px;
+}
+
+.card-text {
+    color: #333;
+}
+
+.btn-danger, .btn-primary, .btn-success {
+    border-radius: 15px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+    .btn-danger:hover, .btn-primary:hover, .btn-success:hover {
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    }
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+    .form-control:focus {
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
