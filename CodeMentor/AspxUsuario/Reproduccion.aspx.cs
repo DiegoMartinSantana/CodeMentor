@@ -30,15 +30,41 @@ namespace CodeMentor
             {
                 Response.Redirect("Ingresar.aspx", false);
             }
-
-            if (!IsPostBack && Request.QueryString["idClase"] == null)
+            if (Request.QueryString["IdClaseOk"] != null)
             {
-                
+
+                int idClaseFinalizo = int.Parse(Request.QueryString["IdClaseOk"]);
+                Session.Add("IdFinalizada", idClaseFinalizo);
+                //finaliza la clase
+                var ClaseGestion = new ClaseGestion();
                 llenarCursoActual();
-                llenarUniudades();
+                 ObtenerUsuario();
+                ClaseGestion.FinalizoClase(idClaseFinalizo,CursoActual.IdCurso,UsuarioActual.Idusuario);
+
+                var idClase = int.Parse(Request.QueryString["IdClaseOk"]);
+                var clase = ClaseGestion.ListarClases().FirstOrDefault(c => c.IdClase == idClase+1); //muestro la clase siguiente a donde finalizo
+
+                var GestionUnidades = new UnidadGestion();
+                ListaUnidades = GestionUnidades.Listado().Where(u => u.IdUnidad == clase.IdUnidad).ToList();
+
+                //llenar cursos 
+                var GestionCurso = new CursosGestion();
+                CursoActual = GestionCurso.Existencia(ListaUnidades.FirstOrDefault().IdCurso);
+                LlenarUltimasDos();
+
+                llenarUnidades(CursoActual.IdCurso);
+
+                // MUESTRO EL VIDEO
+                MostrarVideo(clase.UrlVideo);
+            }
+
+            if (!IsPostBack && Request.QueryString["idClase"] == null || Session["IdFinalizada"] != null)
+            {
+                llenarCursoActual();
+                llenarUnidades();
                 llenarClases();
                 LlenarUltimasDos();
-                
+
                 // Mostrar el video de la primera clase si existe
                 if (ClasesPorUnidad.Count > 0)
                 {
@@ -50,7 +76,7 @@ namespace CodeMentor
                 }
             }
 
-            if (Request.QueryString["idClase"] != null)
+            if (Request.QueryString["idClase"] != null) //IMPORANTE : ACTUALIZAR TAMBIEN EN BASE A CUANDO DA X FINALIZADA
             {
                 var idClase = int.Parse(Request.QueryString["idClase"]);
                 var ClaseGestion = new ClaseGestion();
@@ -80,7 +106,7 @@ namespace CodeMentor
         public void LlenarPreguntas()
         {
 
-           var PregGestion = new PreguntasGestion();
+            var PregGestion = new PreguntasGestion();
             ListadoPreguntasRespuestas = Helper.LlenaryMapearPreg_Resp(CursoActual.IdCurso);
         }
 
@@ -117,28 +143,35 @@ namespace CodeMentor
         {
             var CursoGestion = new CursosGestion();
             int idCurso = 0;
-
             if (Request.QueryString["idCurso"] != null)
             {
                 idCurso = int.Parse((Request.QueryString["idCurso"]));
                 CursoActual = CursoGestion.Existencia(idCurso);
+                if(CursoActual== null)
+                {
+                    Response.Redirect("InicioRegistrado.aspx", false);
+
+                }
+                Session.Add("CursoRep", CursoActual);
+
+            }
+
+
+            if (Session["CursoRep"]!=null)
+            {
+                CursoActual = (Curso)Session["CursoRep"];
             }
             else
             {
-              
                 Response.Redirect("Inicio.aspx", false);
             }
 
-            if (CursoActual == null)
-            {
-                Response.Redirect("InicioRegistrado.aspx",false);
-
-            }
         }
-        public void llenarUniudades() // Llena las unidades por primera vez en la pagina con el id de curso que se recibe por url
+        public void llenarUnidades() // Llena las unidades por primera vez en la pagina con el id de curso que se recibe por url
         {
             var UnidadGestion = new UnidadGestion();
-            ListaUnidades = UnidadGestion.ObtenerUnidadesPorCurso(int.Parse(Request.QueryString["idCurso"]));
+            var curso = (Curso)Session["CursoRep"]; 
+            ListaUnidades = UnidadGestion.ObtenerUnidadesPorCurso(curso.IdCurso);
         }
         public void llenarUnidades(int idCurso) // Llena las unidades luego de refrescar la pagina con otra clase
         {
@@ -167,7 +200,26 @@ namespace CodeMentor
             UsuarioActual = Validaciones.Helper.ObtenerDatos(Session["Usuario"]);
 
         }
+        public bool CheckedClases(int idclase)
+        {
+            //si esta finalizada cambio el valor del checkbox
+            ObtenerUsuario();
+            var ClaseGestion = new ClaseGestion();
+            var clases = ClaseGestion.ClasesFinalizadas(UsuarioActual.Idusuario);
 
-        
+            var clase = clases.FirstOrDefault(c => c.IdClase == idclase);
+
+            if (clase != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+
     }
 }

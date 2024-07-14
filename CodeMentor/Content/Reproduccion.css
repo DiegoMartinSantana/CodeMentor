@@ -38,9 +38,57 @@
     outline: none;
 }
 
+.hidden-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.custom-checkbox label {
+    display: inline-block;
+    width: 40px; /* Tamaño del cuadro en blanco cuando no está marcado */
+    height: 40px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    font-size: 0; /* Oculta el texto interno */
+    transition: background-color 0.2s ease;
+}
+
+    /* Estilo para el ícono del check */
+    .custom-checkbox label:after {
+        content: '\f00c'; /* Código Unicode para el ícono de check en Font Awesome */
+        font-family: "Font Awesome 5 Free"; /* Fuente de Font Awesome */
+        font-weight: 900; /* Peso de la fuente */
+        font-size: 30px; /* Tamaño del ícono */
+        color: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+.hidden-checkbox:checked + label {
+    background-color: #fff; /* Cambia el color de fondo cuando está marcado */
+}
+
+    .hidden-checkbox:checked + label:after {
+        opacity: 1; /* Muestra el ícono cuando está marcado */
+    }
 
 
 .progress {
     height: 30px; /* Altura de la barra de progreso */
     margin-bottom: 20px; /* Espaciado inferior */
+}
+.checkbox-square {
+    display: inline-block;
+    width: 20px; /* Ancho del cuadrado */
+    height: 20px; /* Alto del cuadrado */
+    border: 1px solid #000; /* Borde del cuadrado */
+    background-color: #fff; /* Fondo blanco */
+    text-decoration: none; /* Sin subrayado */
 }

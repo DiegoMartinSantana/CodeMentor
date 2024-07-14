@@ -1,11 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masters/MasterUsuario.Master" AutoEventWireup="true" CodeBehind="Reproduccion.aspx.cs" Inherits="CodeMentor.Reproduccion" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </asp:Content>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <style>
+        .checkbox-square {
+            display: inline-block;
+            width: 20px; /* Ancho del cuadrado */
+            height: 20px; /* Alto del cuadrado */
+            border: 1px solid #000; /* Borde del cuadrado */
+            background-color: #fff; /* Fondo blanco */
+            text-decoration: none; /* Sin subrayado */
+        }
+    </style>
     <!-- CONTENEDOR PRINCIPAL -->
     <link href="../Content/Reproduccion.css" rel="stylesheet" />
     <div class="container mt-4">
@@ -69,7 +78,25 @@
                                                 <img src="Imagenes/Iconos/youtube.png" alt="Icono" style="width: 30px; height: 30px;" />
 
                                             </a>
-                                            <input class="form-check-input ms-2" type="checkbox" style="width: 30px; height: 30px;" value="" id="checkbox_<%:clase.IdClase%>">
+
+
+                                            <div class="custom-checkbox">
+                                                <!-- si la clase no esta check esto-->
+                                                <%if (!CheckedClases(clase.IdClase))
+                                                    { %>
+
+                                                <a href="Reproduccion.aspx?IdClaseOk=<%= clase.IdClase %>" class="checkbox-square"></a>
+                                                <%}
+                                                    else
+                                                    { %>
+                                                <!-- si la clase ESTA check esto-->
+
+                                                <i id="icon-ChkClases" class="fas fa-check icon-hidden" style="color: dodgerblue; font-size: 1.5em;"></i>
+                                                <%} %>
+                                            </div>
+
+
+
                                         </div>
                                     </li>
                                     <%}%>
@@ -83,7 +110,9 @@
             </div>
         </div>
 
-        <%if (ListadoPreguntasRespuestas.Count!=0)
+
+
+        <%if (ListadoPreguntasRespuestas.Count != 0)
             {
         %>
         <div class="row col-8 mb-3" style="margin-top: 1%">
@@ -164,15 +193,15 @@
         %>
 
 
-         
-    <h3>No existen preguntas en este curso. </h3>
-                    <a class="btn btn-primary" style="margin-bottom:7%" href="PreguntasRespuestas.aspx?IdCursoNew=<%:CursoActual.IdCurso %>">Nueva Pregunta</a>
+
+        <h3>No existen preguntas en este curso. </h3>
+        <a class="btn btn-primary" style="margin-bottom: 7%" href="PreguntasRespuestas.aspx?IdCursoNew=<%:CursoActual.IdCurso %>">Nueva Pregunta</a>
 
 
         <%} %>
     </div>
 
 
-     
+
 
 </asp:Content>

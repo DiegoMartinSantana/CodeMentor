@@ -9,7 +9,82 @@ namespace Negocio
 {
     public class ClaseGestion
     {
-        public List<Clase>ClasesFinalizadas(int idCurso, int idUser)
+        public void InsertFinalizada(int idclase, int idinscrip)
+        {
+
+            var Acceso = new ConexionBD();
+            try
+            {
+                Acceso.SetQuery("INSERT INTO CLASES_FINALIZADAS (IDCLASE,IDINSCRIPCION) VALUES(@IDCLASE,@IDINSCRIPCION)");
+                Acceso.SetParametro("@IDCLASE", idclase);
+                Acceso.SetParametro("@IDINSCRIPCION", idinscrip);
+                Acceso.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Acceso.CerrarConexion();
+            }
+        }
+        public List<Clase> ClasesFinalizadas(int idUser)
+        {
+
+
+            var Acceso = new ConexionBD();
+            var Clases = new List<Clase>();
+            try
+            {
+                //JOINEAMOS A UNIDADES X QUE AHI ESTA EL ID DEL CURSO!
+                Acceso.SetQuery("SELECT CF.IDCLASE FROM CLASES_FINALIZADAS CF INNER JOIN CLASES C ON C.IDCLASE = CF.IDCLASE INNER JOIN UNIDADES U ON C.IDUNIDAD = U.IDUNIDAD INNER JOIN INSCRIPCIONES I ON I.IDINSCRIPCION = CF.IDINSCRIPCION AND I.IDUSUARIO = @IDUSER");
+                Acceso.SetParametro("@IDUSER", idUser);
+                Acceso.EjecutarLectura();
+                while (Acceso.Lector.Read())
+                {
+                    Clase clase = new Clase();
+                    clase.IdClase = (int)Acceso.Lector["IDCLASE"];
+                    Clases.Add(clase);
+                }
+                return Clases;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Acceso.CerrarConexion();
+            }
+        }
+        public void FinalizoClase(int idClase,int idcurso,int iduser)
+        {
+            var Acceso = new ConexionBD();
+            var inscripGestion= new InscripcionesGestion();
+            try
+            {
+                //OBTENGO ID INSCRIPCION
+                Inscripcion inscrip = inscripGestion.ObtenerInscripcion(idcurso, iduser);
+
+                string query = "INSERT INTO CLASES_FINALIZADAS( IDCLASE,IDINSCRIPCION) VALUES (@IDCLASE,@IDINSCIP)";
+                Acceso.SetQuery(query);
+                Acceso.SetParametro("@IDCLASE", idClase);
+                Acceso.SetParametro("@IDINSCIP", inscrip.IdInscripcion);
+                Acceso.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Acceso.CerrarConexion();
+            }
+
+        }
+        public List<Clase> ClasesFinalizadas(int idCurso, int idUser)
         {
 
 
