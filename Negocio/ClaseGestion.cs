@@ -9,7 +9,62 @@ namespace Negocio
 {
     public class ClaseGestion
     {
-        
+        public List<Clase>ClasesFinalizadas(int idCurso, int idUser)
+        {
+
+
+            var Acceso = new ConexionBD();
+            var Clases = new List<Clase>();
+            try
+            {
+                //JOINEAMOS A UNIDADES X QUE AHI ESTA EL ID DEL CURSO!
+                Acceso.SetQuery("SELECT CF.IDCLASE FROM CLASES_FINALIZADAS CF INNER JOIN CLASES C ON C.IDCLASE = CF.IDCLASE INNER JOIN UNIDADES U ON C.IDUNIDAD = U.IDUNIDAD INNER JOIN INSCRIPCIONES I ON I.IDINSCRIPCION = CF.IDINSCRIPCION WHERE U.IDCURSO = @IDCURSO AND I.IDUSUARIO = @IDUSER");
+                Acceso.SetParametro("@IDUSER", idUser);
+                Acceso.SetParametro("@IDCURSO", idCurso);
+                Acceso.EjecutarLectura();
+                while (Acceso.Lector.Read())
+                {
+                    Clase clase = new Clase();
+                    clase.IdClase = (int)Acceso.Lector["IDCLASE"];
+                    Clases.Add(clase);
+                }
+                return Clases;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Acceso.CerrarConexion();
+            }
+        }
+        public int ClasesPorCursoCant(int curso)
+        {
+            var Acceso = new ConexionBD();
+            try
+            {
+                Acceso.SetQuery("SELECT COUNT(C.IDCLASE) AS CANTIDAD FROM CLASES C INNER JOIN UNIDADES U ON U.IDUNIDAD = C.IDUNIDAD WHERE U.IDCURSO = @IDCURSO");
+                Acceso.SetParametro("@IDCURSO", curso);
+                Acceso.EjecutarLectura();
+                if (Acceso.Lector.Read())
+                {
+                    return (int)Acceso.Lector["CANTIDAD"];
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Acceso.CerrarConexion();
+            }
+        }
         public void EliminarClases_Unidad(int idunidad)
         {
 

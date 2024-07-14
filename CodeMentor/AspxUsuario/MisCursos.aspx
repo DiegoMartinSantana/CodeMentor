@@ -12,7 +12,10 @@
         <div class="container">
             <div class="row justify-content-center bienvenida-row" style="background-color:white;">
                 <div class="col text-center">
+                    <%if (InfoUser != null)
+                        {  %>
                     <h2 class="bienvenida-titulo" style="color: black">¡Siga Aprendiendo <%: InfoUser.Nombre.ToUpperInvariant() %>!</h2>
+                        <%} %>
                 </div>
             </div>
         </div>
@@ -43,7 +46,7 @@
 
                             <%} %>
                             <div class="card-img-top-wrapper" style="border-bottom: solid 0.3px lightgrey">
-                                <% ImageCurso.ImageUrl = curso.UrlPortada; %>
+                                <% ImageCurso.ImageUrl = curso.UrlPortadaCarpeta; %>
                                 <asp:Image ID="ImageCurso" class="card-img-top img-cuadrada" alt="Imagen del Curso" runat="server" />
                             </div>
                             <div class="card-body text-center body-card">

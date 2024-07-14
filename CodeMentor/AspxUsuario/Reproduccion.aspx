@@ -69,7 +69,7 @@
                                                 <img src="Imagenes/Iconos/youtube.png" alt="Icono" style="width: 30px; height: 30px;" />
 
                                             </a>
-                                            <input class="form-check-input ms-2" type="checkbox" style="width: 30px; height: 30px;" value="" id="checkbox_<%: unidad.IdUnidad%>">
+                                            <input class="form-check-input ms-2" type="checkbox" style="width: 30px; height: 30px;" value="" id="checkbox_<%:clase.IdClase%>">
                                         </div>
                                     </li>
                                     <%}%>

@@ -27,13 +27,13 @@
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://i.ibb.co/PgHcJ6H/banners.jpg" class="d-block w-100" alt="First slide">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/79731568097599.5b50bca477735.jpg" class="d-block w-100" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img src="https://i.ibb.co/1ZPsL2t/banners-2.jpg" class="d-block w-100" alt="Second slide">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/79731568097599.5b50bca477735.jpg" class="d-block w-100" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img src="https://i.ibb.co/vjYjBRj/banners-3.jpg" style="height: 400px" class="d-block w-100" alt="Third slide">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/79731568097599.5b50bca477735.jpg" style="height: 400px" class="d-block w-100" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#customCarousel" role="button" data-bs-slide="prev">

@@ -43,23 +43,21 @@ namespace CodeMentor.AspxUsuario
         }
         public string ObtenerProgreso(int idCurso,int codigo=0)
         {
-            // obtengo cantidad de unidades primero
-            var UniGestion = new UnidadGestion();
-            int Unidades = UniGestion.UnidadesPorCursoCant(idCurso);
 
-            // obtengo unidades finalizadas
-            int UnidadesFinalizadas = UniGestion.UnidadesFinalizadas(idCurso, InfoUser.Idusuario).Count;
+            // obtengo cantidad de clases primero
+            var ClaseGestion = new ClaseGestion();
+            int Clases = ClaseGestion.ClasesPorCursoCant(idCurso);
 
+            //obtengo clases finalizadas
+
+            int ClasesFinalizadas = ClaseGestion.ClasesFinalizadas(idCurso, InfoUser.Idusuario).Count;
             //calculo progreso
-            int Progreso = (UnidadesFinalizadas * 100) / Unidades;
+            int Progreso = (ClasesFinalizadas * 100 / Clases);
             if (codigo != 0)
             {
                 return Progreso.ToString();
             }
-
             string progreso = Progreso.ToString() + "%";
-
-            
             return progreso;
 
         }

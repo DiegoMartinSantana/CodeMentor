@@ -26,7 +26,7 @@
                             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
                             <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
                             <asp:BoundField HeaderText="Curso" DataField="NombreCurso" />
-                            <asp:TemplateField HeaderText="Habilitar/Deshabilitar">
+                            <asp:TemplateField HeaderText="Habilitar">
                                 <ItemTemplate>
                                     <asp:CheckBox ID="chkHabilitar" runat="server" Checked='<%# Eval("Habilitada") %>' />
                                 </ItemTemplate>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-12" style="margin-left:122%" >
 
-                    <asp:Button ID="btnHabilitar"  CssClass="btn btn-primary me-2" Text="Gestionar Habilitaciones" OnClick="btnHabilitar_Click" runat="server" />
+                    <asp:Button ID="btnHabilitar"  CssClass="btn btn-primary me-2" Text="Habilitar" OnClick="btnHabilitar_Click" runat="server" />
                     <asp:Button ID="btnConfirmarEliminacion"  CssClass="btn btn-primary me-2" Text="Gestionar Altas/Bajas" OnClick="btnConfirmarEliminacion_Click" runat="server" />
 
                 </div>

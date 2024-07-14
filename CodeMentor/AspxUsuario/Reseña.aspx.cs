@@ -51,6 +51,17 @@ namespace CodeMentor.AspxUsuario
                     DdlPuntaje.Enabled = false;
 
                 }
+                else
+                {
+                    H2Yadejo.Visible = false;
+
+                    EnviarReseña.Visible = true;
+                    BtnVerMas.Visible = true;
+                    TxtDescripcion.Text = "";
+                    TxtDescripcion.Enabled = true;
+                    DdlPuntaje.Enabled = true;
+                    BtnVerMas.Enabled = true;
+                }
 
             }
         }
@@ -78,9 +89,7 @@ namespace CodeMentor.AspxUsuario
                 reseña.IdCurso = curso.IdCurso;
 
                 GestionReseña.InsertarReseña(reseña);
-                EnviarReseña.Visible = false;
-                BtnVerMas.Visible = true;
-
+                Response.Redirect("InicioRegistrado.aspx");
             }
         }
 

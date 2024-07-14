@@ -149,19 +149,21 @@ namespace CodeMentor
             //validar nulo vacio 
             if (string.IsNullOrEmpty(TxtTitulo.Text) || string.IsNullOrEmpty(TxtCuerpo.Text))
             {
-                return;
+                CursoActual = (Curso)Session["CursoActual"];
+                Response.Redirect("Preguntasrespuestas.aspx?IdCurso=" + CursoActual.IdCurso);
             }
-            if (TxtTitulo.Text.Length > 150 || TxtCuerpo.Text.Length > 1700 || TxtTitulo.Text.Length < 3
-                || TxtCuerpo.Text.Length < 30) //validar longitud NO SUPERE MAXIMO VARCHAR DE BD
+            if (TxtTitulo.Text.Length > 150 || TxtCuerpo.Text.Length > 1700) 
+                 //validar longitud NO SUPERE MAXIMO VARCHAR DE BD
             {
-                return;
+                CursoActual = (Curso)Session["CursoActual"];
+                Response.Redirect("Preguntasrespuestas.aspx?IdCurso=" + CursoActual.IdCurso);
             }
 
+            CursoActual = (Curso)Session["CursoActual"];
 
             var Pregunta = new Pregunta();
             Pregunta.Titulo = TxtTitulo.Text;
             Pregunta.Cuerpo = TxtCuerpo.Text;
-            ObtenerCursoActual();
             Pregunta.IdCurso = CursoActual.IdCurso;
             ObtenerUsuario();
 

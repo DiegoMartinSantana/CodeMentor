@@ -59,13 +59,14 @@ namespace CodeMentor.AspxUsuario
             return 1;
         }
 
-
-
-
         protected void BtnConfirmarBorrar_Click(object sender, EventArgs e)
         {
             var PregGestion = new PreguntasGestion();
             PregGestion.BajaPregunta(Modificar.IdPregunta);
+            var CursoActual = (Curso)Session["CursoActual"];
+
+            Response.Redirect("Preguntasrespuestas.aspx?IdCurso=" + CursoActual.IdCurso);
+
         }
 
         protected void BtnEliminar_Click(object sender, ImageClickEventArgs e)
@@ -87,7 +88,17 @@ namespace CodeMentor.AspxUsuario
             Pregunta.Titulo = TxtTitulo.Text;
             var GestionPreg = new PreguntasGestion();
             GestionPreg.ModificarPregunta(Pregunta);
-            Response.Redirect("PreguntaDetalle.aspx?Modificar=" + Pregunta.IdPregunta);
+            var CursoActual = (Curso)Session["CursoActual"];
+
+            Response.Redirect("Preguntasrespuestas.aspx?IdCurso=" + CursoActual.IdCurso);
+
+        }
+
+        protected void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            var CursoActual = (Curso)Session["CursoActual"];
+
+            Response.Redirect("Preguntasrespuestas.aspx?IdCurso=" + CursoActual.IdCurso);
         }
     }
 }

@@ -31,8 +31,14 @@ namespace Negocio
                     reseña.Descripcion = (string)Acceso.Lector["DESCRIPCION"];
                     reseña.Fecha = (DateTime)Acceso.Lector["FECHA"];
                 }
-                return reseña;
-
+                if (reseña.Descripcion != null)
+                {
+                    return reseña;
+                }
+                else
+                {
+                    return null;
+                }
             }
             catch (Exception ex)
             {
@@ -55,8 +61,6 @@ namespace Negocio
                 {
                     Acceso.SetQuery("SELECT r.IDRESEÑA, c.IDCURSO as IDCURSO ,iu.APELLIDO, iu.NOMBRE,c.NOMBRE as NOMBRECURSO,r.PUNTAJE,r.DESCRIPCION, r.FECHA , iu.URL_FOTOPERFIL FROM INFORMACION_USUARIO iu INNER JOIN INSCRIPCIONES i on i.IDUSUARIO=iu.IDUSUARIO INNER JOIN RESEÑAS r on r.IDINSCRIPCION=i.IDINSCRIPCION INNER JOIN CURSOS c on c.IDCURSO=i.IDCURSO WHERE c.IDCURSO=@IDCurso");
                     Acceso.SetParametro("@IDCurso", IdCurso);
-
-
                 }
                 else
                 {

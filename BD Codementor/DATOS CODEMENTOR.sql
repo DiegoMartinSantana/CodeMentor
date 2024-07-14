@@ -187,19 +187,16 @@ INSERT INTO INSCRIPCIONES (IDCURSO, IDUSUARIO,HABILITADA) VALUES
 --RESEÑAS
 -- C#
 INSERT INTO RESEÑAS(IDINSCRIPCION, IDCURSO, PUNTAJE, DESCRIPCION) VALUES
-(1, 1, 4, 'Excelente curso, aprendí mucho sobre C# y ahora me siento más seguro para desarrollar aplicaciones.'),
-(2, 1, 5, 'Increíble curso, el contenido estaba muy bien organizado y los ejemplos fueron muy útiles.'),
-(3, 1, 4, 'Muy buen curso para principiantes, cubre los fundamentos de C# de manera clara y concisa.');
+(1, 1, 4, 'Excelente curso, aprendí mucho sobre C# y ahora me siento más seguro para desarrollar aplicaciones.');
 
 -- CSS, HTML y JS
 INSERT INTO RESEÑAS(IDINSCRIPCION, IDCURSO, PUNTAJE, DESCRIPCION) VALUES
-(2, 3, 4, 'Buen curso introductorio, me ayudó a comprender los conceptos básicos de desarrollo web.'),
 (3, 3, 3, 'El curso fue útil, pero me hubiera gustado más ejercicios prácticos para practicar.');
 
 -- JavaScript
 INSERT INTO RESEÑAS(IDINSCRIPCION, IDCURSO, PUNTAJE, DESCRIPCION) VALUES
-(3, 5, 5, '¡Excelente curso! Aprendí mucho sobre JavaScript y ahora puedo crear aplicaciones web interactivas.'),
-(1, 5, 4, 'Muy buen curso para aprender JavaScript desde cero, los ejemplos fueron muy claros y fáciles de entender.');
+(5, 5, 4, 'Muy buen curso para aprender JavaScript desde cero, los ejemplos fueron muy claros y fáciles de entender.');
+
 
 
 --PAISES
@@ -470,35 +467,15 @@ VALUES
 )
 GO
 -- CURSO NRO : 1
-INSERT INTO UNIDADES_FINALIZADAS (IDUNIDAD, IDUSUARIO) VALUES
-(1, 1),
-(2, 1),
-(3, 1),
-(4, 1),
-(5, 1);
 
+INSERT INTO CLASES_FINALIZADAS(IDCLASE,IDINSCRIPCION)VALUES
+(1,1),(2,1),(3,1),(4,1),(5,1),(6,1),(7,1),(8,1),(9,1),(10,1), --CURSO 1
+(21,3),(22,3),(23,3),(24,3),(25,3),(26,3),(27,3),(28,3),(29,3),(30,3), --CURSO 3
+(41,5),(42,5),(43,5),(44,5),(45,5),(46,5),(47,5) --CURSO 5
+
+--COMO FINALIZO TODAS CLASES .. GENERAMOS CERTIFICACIONES. IMPORTANTE DATOS CONSISTENTES.
 GO
--- 3
-INSERT INTO UNIDADES_FINALIZADAS (IDUNIDAD, IDUSUARIO) VALUES
-(11, 1),
-(12, 1),
-(13, 1),
-(14, 1),
-(15, 1);
-
-GO
--- 5
-INSERT INTO UNIDADES_FINALIZADAS (IDUNIDAD, IDUSUARIO) VALUES
-(21, 1),
-(22, 1),
-(23, 1),
-(24, 1)
-
---COMO FINALIZO TODAS UNIDADES .. GENERAMOS CERTIFICACIONES. IMPORTANTE DATOS CONSISTENTES.
-GO
-INSERT INTO CERTIFICACIONES (IDINSCRIPCION) VALUES (1),(5),(3)
-
-
+INSERT INTO CERTIFICACIONES (IDINSCRIPCION) VALUES (1),(3)
 GO
 
 --PREGUNTAS

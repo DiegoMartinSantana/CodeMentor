@@ -41,7 +41,7 @@
                 </div>
                 <div class="mb-3">
                     <p>Su pregunta no ha sido respondida por el momento. Puede hacer modificaciones.</p>
-                    <a href="PreguntasRespuestas.aspx" class="btn btn-secondary">Cancelar</a>
+                    <asp:Button Text="Cancelar" ID="BtnCancelar" OnClick="BtnCancelar_Click" CssClass="btn btn-secondary" style="margin-left:1%" runat="server" />
 
                     <asp:Button Text="Guardar Cambios" ID="BtnGuardarCambios" OnClick="BtnGuardarCambios_Click" CssClass="btn btn-secondary" style="margin-left:1%" runat="server" />
                     <asp:Label style="color:red;margin-left:2%" Text="No se han producido Cambios" ID="LblNoCambios" runat="server" />

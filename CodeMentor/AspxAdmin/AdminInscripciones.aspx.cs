@@ -43,10 +43,7 @@ namespace CodeMentor.AspxAdmin
                 {
                     insGest.AltaInscripcionHabilitada(idInscripcion);
                 }
-                if (chkEliminar.Checked == false && chkEliminar!=null)
-                {
-                    insGest.BajaInscripcionHabilitada(idInscripcion);
-                }
+                
             }
            
             Response.Redirect("AdminInscripciones.aspx", false);
