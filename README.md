@@ -1,6 +1,7 @@
 # CodeMentor
 
 Plataforma de Cursos de Programacion 
+- .NET FRAMEWORK 4.8 ,SQL SERVER , ADO.NET , FLUENT VALIDATION, ITEXTSHARP ( PDF) Y BOOSTRAPP.
 
 ## Descripcion 
 
