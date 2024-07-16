@@ -1,9 +1,32 @@
 # CodeMentor
 
-Plataforma de Cursos de Programacion realizada para crear y administrar cursos.
-La plataforma fue creada con la intencion de que los estudiantes no solo puedan ver y certificarse en los cursos a los cuales se inscriban.
+Plataforma de Cursos de Programacion 
 
-Sino que podran realizar preguntas en los mismos. Las cuales el administrador podra
+La plataforma fue creada con la intencion de que los estudiantes puedan :
+
+- Visualizar todos los cursos disponibles.
+- Seccion de Registro / Login  y posterior acceso y edicion de datos personales.
+- Ver a detalle los cursos con toda su informacion disponible.
+- Solicitar Inscripcion a los mismos.
+- Al tener acceso se les habilitara la seccion de Reproduccion del curso inscripto , en el cual podra :
+           - Ver las Clases y Unidades del mismo (Consumiendo de Youtube directamente).
+           - Marcar las clases vistas para su correspondiente progreso.
+           - Ver las preguntas de otros estudiantes y realizar las suyas.
+           - Visualizar seccion de preguntas y respuestas.
+
+- Ademas una vez inscriptos tendran su seccion de MIS CURSOS y en la cual podra :
+           - Realizar seguimiento del Progreso en sus clases.
+           - Emitir Certificacion una vez finalizado el curso.
+           - Al certificarse podra dejar una Reseña con puntaje y descripcion.
+
+ 
+ Para la interaccion del estudiante con el Instructor , ademas de las preguntas podra :
+           - Contactarse con el instructor via Email de manera directa.
+           - Reporte de Problemas en el caso de presentarse alguno.
+           
+
+
+- Registrarse
 
 
 
