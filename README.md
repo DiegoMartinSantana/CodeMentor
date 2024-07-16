@@ -2,12 +2,25 @@
 
 Plataforma de Cursos de Programacion 
 
+## Descripcion
+El Administrador de Artículos cuenta con varias secciones clave para mejorar la experiencia del usuario:
+
+
+##ESTUDIANTES
 La plataforma fue creada con la intencion de que los estudiantes puedan :
 
 - Visualizar todos los cursos disponibles.
+
+  
 - Seccion de Registro / Login  y posterior acceso y edicion de datos personales.
+
+  
 - Ver a detalle los cursos con toda su informacion disponible.
+
+  
 - Solicitar Inscripcion a los mismos.
+
+  
 - Al tener acceso se les habilitara la seccion de Reproduccion del curso inscripto , en el cual podra :
 
            - Ver las Clases y Unidades del mismo (Consumiendo de Youtube directamente).
@@ -33,15 +46,40 @@ La plataforma fue creada con la intencion de que los estudiantes puedan :
            
 La plataforma cuenta con guias para la certificacion y la inscripcion a un Curso.
 
+--------------------------------------------------------------------------------------------------------------------------------------
+##INSTRUCTOR
 
-, el cual a traves del panel de administracion podra :
- - Cargar , diseñar y crear sus Cursos.
- - Carga de unidades del mismo.
- - Carga de clases del Mismo
- - Lenguajes Asociados.
- - Categoria Asociada.
+- Llevar un control general de la plataforam :
 
-Ademas podra llevar un Control sobre los usuarios de la plataforma, pudiendo eliminarlos de ser necesario.
+           - Cantidad de inscripciones totales.
+           - Ultima reseña dejada.
+           - Total de Certificaciones en la Plataforma.
+           - Ultimo Curso añadido.
+
+- Crear , cargar , diseñar y editar sus cursos:
+
+            - Creacion del Curso. 
+            - Carga de unidades del mismo.
+            - Carga de clases del Mismo
+            - Lenguajes Asociados.
+            - Categoria Asociada.
+  
+ - Tener un relevamiento de los usuarios y inscripciones :
+
+            - Grilla de usuarios con posibilidad de dar de baja.  
+            - Inscripciones pendientes (Alta y Baja).
+            - Habilitar Acceso a un curso ( irrevocable).
+              
+
+ - Responder a las preguntas de los estudiantes :
+
+            - Preguntas sin responder.  
+            - Filtrado por cursos.
+            - Preguntas realizadas en la ultima semana.
+            - Edicion de Respuestas.
+            - Eliminar Preguntas.                        
+
+
 
 
 Tambien contara con la posibilidad de administrar las inscripciones a sus cursos. Permitiendo a aquellos que solo abonen el curso acceder al mismo, a traves de una Habilitacion.
@@ -62,8 +100,6 @@ Ademas podra llevar un relevamiento del estado de la Plataforma :
 [ARTICLE_MANAGEMENT](http://articlemanagement.somee.com/Default)
 
 
-## Descripcion
-El Administrador de Artículos cuenta con varias secciones clave para mejorar la experiencia del usuario:
 
  Login / Registro
 - Recuperación de contraseña mediante un código enviado por email.
