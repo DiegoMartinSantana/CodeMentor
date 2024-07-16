@@ -136,16 +136,82 @@ La plataforma cuenta con guias para la certificacion y la inscripcion a un Curso
 
 ## 📷 Screenshots
 
-![Captura de pantalla (120)](https://github.com/user-attachments/assets/2b751fe3-27dd-48fc-b5d7-a81fa826ea7c)
-![Captura de pantalla (119)](https://github.com/user-attachments/assets/d946c22b-6ae5-47b9-a4f0-e2feaae45aab)
-![Captura de pantalla (118)](https://github.com/user-attachments/assets/60145ce3-e088-4172-8570-b6fcb67feeaa)
-![Captura de pantalla (117)](https://github.com/user-attachments/assets/57fe1cd2-e1d2-47ac-b0fb-118f51c174f9)
-![Captura de pantalla (116)](https://github.com/user-attachments/assets/6130da8f-6b42-46c3-bdbf-a7dadef6691a)
-![Captura de pantalla (115)](https://github.com/user-attachments/assets/9d489a7d-4d24-43d6-9c81-e8e2b5a26c7c)
-![Captura de pantalla (111)](https://github.com/user-attachments/assets/907f1079-704b-4f27-ae6d-656b5175b699)
-![Captura de pantalla (110)](https://github.com/user-attachments/assets/376ae8d0-cdb9-4482-b5c3-991338b4431c)
-![Captura de pantalla (109)](https://github.com/user-attachments/assets/22d1f3e3-b685-4b99-8656-b08bd424be8a)
-![Captura de pantalla (108)](https://github.com/user-attachments/assets/1c61cdd5-5613-43cd-b5a6-ae79bf790751)
-![Captura de pantalla (107)](https://github.com/user-attachments/assets/cbd06d28-167e-4f62-bb6b-95e328d05515)
-![Captura de pantalla (106)](https://github.com/user-attachments/assets/95f94de0-3c32-4359-8411-a09a34eae7ac)
+## ESTUDIANTES
+
+![Captura de pantalla (106)](https://github.com/user-attachments/assets/9cfcf9ac-17c2-4656-a98d-39effeab2036)
+
+![Captura de pantalla (107)](https://github.com/user-attachments/assets/27d0a5d6-eefd-49a4-9dea-b8e9f381adca)
+
+![Captura de pantalla (108)](https://github.com/user-attachments/assets/0ef648e9-7b0b-4248-8a15-dacd37e61215)
+
+![Captura de pantalla (109)](https://github.com/user-attachments/assets/9d76e2c2-400a-48f6-92a5-da5711500bc7)
+
+
+![Captura de pantalla (110)](https://github.com/user-attachments/assets/79b687da-d96b-4849-9a1e-cbedf6ae69ae)
+
+
+![Captura de pantalla (111)](https://github.com/user-attachments/assets/dc2dff4a-5bc9-4b93-be4b-9027821b2ed2)
+
+![Captura de pantalla (115)](https://github.com/user-attachments/assets/ebc48392-7804-4aea-afd0-8886d5159f81)
+
+
+
+
+
+## INSTRUCTOR
+
+
+![Captura de pantalla (116)](https://github.com/user-attachments/assets/3c289444-960f-401e-88cc-0899e68ab7d0)
+
+
+![Captura de pantalla (117)](https://github.com/user-attachments/assets/a5a59a3d-f0f0-43d3-bd30-7fe0d864cb1b)
+
+
+![Captura de pantalla (118)](https://github.com/user-attachments/assets/fb0804fd-425d-4e66-9389-5dd320ad562f)
+
+
+![Captura de pantalla (119)](https://github.com/user-attachments/assets/9ddc67ab-8af6-4485-a509-262886cc9ac3)
+
+
+![Captura de pantalla (120)](https://github.com/user-attachments/assets/dc21972e-b5cc-4058-9f95-aca9061ae598)
+
+
+![Captura de pantalla (126)](https://github.com/user-attachments/assets/c74e01c8-a6d4-4655-bc45-1690eaf04cd2)
+
+
+
+![Captura de pantalla (123)](https://github.com/user-attachments/assets/24cd608a-aeb5-4f21-b990-02834f943cbf)
+
+
+
+![Captura de pantalla (124)](https://github.com/user-attachments/assets/6947067c-6415-4415-85b5-f1f04d6b1d5f)
+
+
+
+
+![Captura de pantalla (122)](https://github.com/user-attachments/assets/2f72c13f-b7c5-41ed-8e84-697bd23ad7eb)
+
+
+
+![Captura de pantalla (121)](https://github.com/user-attachments/assets/e38e4b8d-71d0-4a57-bea4-c5bf0557b4ae)
+
+![Captura de pantalla (125)](https://github.com/user-attachments/assets/caadcafd-c2fe-4e2a-a35b-5c00a66661bd)
+
+
+
+
+
+![Captura de pantalla (127)](https://github.com/user-attachments/assets/848b5e1a-0caa-454d-af36-bed7a70dd7c1)
+
+
+
+
+
+
+
+
+
+
+
+
 
