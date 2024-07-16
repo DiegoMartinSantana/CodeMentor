@@ -133,3 +133,19 @@ La plataforma cuenta con guias para la certificacion y la inscripcion a un Curso
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://online.publuu.com/585442/1313556)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/diegosantanadev-net/)
+
+## 📷 Screenshots
+
+![Captura de pantalla (120)](https://github.com/user-attachments/assets/2b751fe3-27dd-48fc-b5d7-a81fa826ea7c)
+![Captura de pantalla (119)](https://github.com/user-attachments/assets/d946c22b-6ae5-47b9-a4f0-e2feaae45aab)
+![Captura de pantalla (118)](https://github.com/user-attachments/assets/60145ce3-e088-4172-8570-b6fcb67feeaa)
+![Captura de pantalla (117)](https://github.com/user-attachments/assets/57fe1cd2-e1d2-47ac-b0fb-118f51c174f9)
+![Captura de pantalla (116)](https://github.com/user-attachments/assets/6130da8f-6b42-46c3-bdbf-a7dadef6691a)
+![Captura de pantalla (115)](https://github.com/user-attachments/assets/9d489a7d-4d24-43d6-9c81-e8e2b5a26c7c)
+![Captura de pantalla (111)](https://github.com/user-attachments/assets/907f1079-704b-4f27-ae6d-656b5175b699)
+![Captura de pantalla (110)](https://github.com/user-attachments/assets/376ae8d0-cdb9-4482-b5c3-991338b4431c)
+![Captura de pantalla (109)](https://github.com/user-attachments/assets/22d1f3e3-b685-4b99-8656-b08bd424be8a)
+![Captura de pantalla (108)](https://github.com/user-attachments/assets/1c61cdd5-5613-43cd-b5a6-ae79bf790751)
+![Captura de pantalla (107)](https://github.com/user-attachments/assets/cbd06d28-167e-4f62-bb6b-95e328d05515)
+![Captura de pantalla (106)](https://github.com/user-attachments/assets/95f94de0-3c32-4359-8411-a09a34eae7ac)
+
