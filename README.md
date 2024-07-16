@@ -2,8 +2,9 @@
 
 Plataforma de Cursos de Programacion 
 
-## Descripcion
-El Administrador de Artículos cuenta con varias secciones clave para mejorar la experiencia del usuario:
+## Descripcion 
+
+La plataforma permite a los estudiantes visualizar, inscribirse y seguir cursos, gestionar su progreso, obtener certificaciones, dejar reseña y contactar al instructor. El instructor puede crear y editar cursos, gestionar inscripciones y usuarios, responder preguntas, y administrar reseñas. Creado con Webforms ,Utiliza SQL Server, Ado.Net para manejo de BD, reproduce videos de YouTube, valida datos con Fluent Validation, , genera PDFs con ITextSharp entre otras.
 
 ## SITIO WEB
 
@@ -107,7 +108,7 @@ La plataforma cuenta con guias para la certificacion y la inscripcion a un Curso
 
 ## Hitos Principales
 - Arquitectura en capas.
-- Creacion y Almacenamiento en base de datos (SQL Server).
+- Creacion de Bd y Almacenamiento en base de datos (SQL Server).
 - Manejo de Bd via Ado.Net
 - Reproduccion incrustando Youtube.
 - Manejo de Finalizacion de clases y unidades.
