@@ -119,18 +119,18 @@ La plataforma cuenta con guias para la certificacion y la inscripcion a un Curso
 - Generacion de Pdf utlizando  ITextSharp.
 
 ## PRUEBAS
-- Usuario
+- ESTUDIANTE
 
   
   user@user.com 
 
   pass : user
-- Admin
-
+- INSTRUCTOR
   
   admin@admin.com
 
   pass : admin
+  
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://online.publuu.com/585442/1313556)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/diegosantanadev-net/)
