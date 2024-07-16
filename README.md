@@ -6,7 +6,7 @@ Plataforma de Cursos de Programacion
 El Administrador de Artículos cuenta con varias secciones clave para mejorar la experiencia del usuario:
 
 
-##ESTUDIANTES
+## ESTUDIANTES
 La plataforma fue creada con la intencion de que los estudiantes puedan :
 
 - Visualizar todos los cursos disponibles.
@@ -47,9 +47,9 @@ La plataforma fue creada con la intencion de que los estudiantes puedan :
 La plataforma cuenta con guias para la certificacion y la inscripcion a un Curso.
 
 --------------------------------------------------------------------------------------------------------------------------------------
-##INSTRUCTOR
+## INSTRUCTOR
 
-- Llevar un control general de la plataforam :
+- Llevar un control general de la plataforma :
 
            - Cantidad de inscripciones totales.
            - Ultima reseña dejada.
@@ -77,22 +77,27 @@ La plataforma cuenta con guias para la certificacion y la inscripcion a un Curso
             - Filtrado por cursos.
             - Preguntas realizadas en la ultima semana.
             - Edicion de Respuestas.
-            - Eliminar Preguntas.                        
+            - Eliminar Preguntas.
+   
+ - Administracion de las reseñas :
 
-
-
-
-Tambien contara con la posibilidad de administrar las inscripciones a sus cursos. Permitiendo a aquellos que solo abonen el curso acceder al mismo, a traves de una Habilitacion.
-
-
-
-Ademas podra llevar un relevamiento del estado de la Plataforma : 
-- Certificados Emitidos.
+            - Filtrado por cursos.
+            - Filtrado por Puntuacion.
+            - Dar de Baja una reseña.
+              
   
+ - Ademas podra llevar un relevamiento de :
+
+            - Lenguajes Asociados a un curso. (Alta y Edicion)
+            - Categorias asociadas. (Alta y Edicion)
+            - Dar de Baja una reseña.
 
 
+ - Todas sus secciones cuentan con sus correspondientes filtros de Busqueda :
 
-
+            - A-Z / Z-A
+            - Cursos con : MAYOR / MENOR PRECIO, MAS / MENOS INSCRIPCIONES.
+            - PUNTAJES,PENDIENTES ETC.
 
 
 ## SITIO WEB
