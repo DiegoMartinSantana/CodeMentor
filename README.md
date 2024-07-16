@@ -9,26 +9,29 @@ La plataforma fue creada con la intencion de que los estudiantes puedan :
 - Ver a detalle los cursos con toda su informacion disponible.
 - Solicitar Inscripcion a los mismos.
 - Al tener acceso se les habilitara la seccion de Reproduccion del curso inscripto , en el cual podra :
+
            - Ver las Clases y Unidades del mismo (Consumiendo de Youtube directamente).
            - Marcar las clases vistas para su correspondiente progreso.
            - Ver las preguntas de otros estudiantes y realizar las suyas.
            - Visualizar seccion de preguntas y respuestas.
 
 - Ademas una vez inscriptos tendran su seccion de MIS CURSOS y en la cual podra :
+
            - Realizar seguimiento del Progreso en sus clases.
            - Emitir Certificacion una vez finalizado el curso.
-           - Al certificarse podra dejar una Reseña con puntaje y descripcion.
 
- 
+ - Al finalizar un curso podra :
+
+           - Certificarse en el mismo (Descarga de Pdf) en seccion MIS CURSOS.
+           - Al certificarse podra dejar una Reseña con puntaje y descripcion.
+   
+   
  Para la interaccion del estudiante con el Instructor , ademas de las preguntas podra :
+ 
            - Contactarse con el instructor via Email de manera directa.
            - Reporte de Problemas en el caso de presentarse alguno.
            
-
-
-- Registrarse
-
-
+La plataforma cuenta con guias para la certificacion y la inscripcion a un Curso.
 
 
 , el cual a traves del panel de administracion podra :
