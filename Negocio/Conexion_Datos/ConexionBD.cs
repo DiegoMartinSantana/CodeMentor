@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,8 @@ namespace Negocio
     public class ConexionBD
     {
      
-        private SqlConnection _Conexion;
-        private SqlCommand _Comando;
+        private readonly SqlConnection _Conexion;
+        private  readonly SqlCommand _Comando;
         private SqlDataReader _Lector;
      
         public SqlDataReader Lector
@@ -21,7 +22,7 @@ namespace Negocio
 
         public ConexionBD()
         {           
-            _Conexion = new SqlConnection(@"server =.\SQLEXPRESS;database=CODEMENTOR; integrated security = true"); 
+            _Conexion = new SqlConnection(ConfigurationManager.AppSettings["ConnectionString"]); 
             //inicializar Comando
             _Comando = new SqlCommand();
         }
